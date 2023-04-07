@@ -25,7 +25,7 @@
 # if s % 6 == 0:
 #     print(f'{int(s)} -> {int(s / 6)}, {int(s - s / 3)}, {int(s / 6)}')
 # else:
-#     print('Thay cant this amount of paper cranes')
+#     print('They couldn't do that amount of paper cranes')
 
 
 # Task 3
