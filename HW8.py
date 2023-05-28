@@ -52,7 +52,7 @@ def init_menu():
     elif n == 7:
         delete_contact_file(path)
     elif n == 8:
-        exit()
+        quit()
 
     
 
@@ -196,7 +196,5 @@ def delete_contact_file(path):
     data.close()
     init_menu()
 
-def exit():
-    quit()
 
 init_menu()
