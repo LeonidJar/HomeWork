@@ -26,6 +26,16 @@ def print_contacts(phone_book: list[dict[str, str]], error: str):
         print_message(error)
 
 
+def print_search_result(phone_book: dict[str, str], error: str):
+    if phone_book :
+        print('\n' + '=' * 71)
+        for i, contact in enumerate(phone_book, 1):
+            print(f'{i:>3}. {contact.get("name"):<20} | {contact.get("phone"):<20} | {contact.get("comment"):<20}')
+        print('=' * 71 + '\n')
+    else:
+        print_message(error)
+
+
 def input_contact(message: str, cancel: str) -> dict:
     contact = {}
     print(message)
@@ -36,6 +46,20 @@ def input_contact(message: str, cancel: str) -> dict:
             contact[key] = data
         else:
             print_message(cancel)
+
+    return contact
+
+
+def input_contact_search(message: str, cancel: str) -> str:
+    contact = str
+    print(message)
+
+    data = input(text.input_contact['name'])
+    if data:
+        contact = data
+    else:
+        print_message(cancel)
+
     return contact
 
 
